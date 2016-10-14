@@ -1,0 +1,28 @@
+<ion-view view-title="Payment info">
+      <ion-content class="padding">
+        <label class="item item-input">
+          <span class="input-label">Card number</span>
+          <input type="text" size="20" ng-model="FormData.number" placeholder="4242 4242 4242 4242"/>
+        </label>
+        
+        <label class="item item-input">
+          <span class="input-label">Exp. Mth (MM)</span>
+          <input type="text" size="2" ng-model="FormData.exp_month"/ placeholder="01">
+        </label>
+        
+        <label class="item item-input">
+          <span class="input-label">Exp. Year (YYYY)</span>
+          <input type="text" size="4" ng-model="FormData.exp_year"/ placeholder="2020">
+        </label>
+        
+        <label class="item item-input">
+          <span class="input-label">Sec. Code (CVC)</span>
+          <input type="text" size="4" ng-model="FormData.cvc"/ placeholder="123">
+        </label>
+      
+
+        <div class="padding center">
+          <button class="button button-block button-balanced" ng-click="createToken()">Submit</button>
+        </div>
+        </ion-content>
+</ion-view>
