@@ -1,0 +1,41 @@
+<ion-nav-bar>
+  <ion-nav-back-button class="button-clear">
+    <i class="ion-arrow-left-c"></i> Back
+  </ion-nav-back-button>
+</ion-nav-bar>
+<ion-view view-title="Lista de Productos">
+<ion-header-bar class="bar-stable" ng-controller="prodCtrl">
+      <h1 class="title">Lista de Productos</h1>
+    </ion-header-bar>
+    <ion-content>
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/mcfly.jpg">
+    <h2>Marty McFly</h2>
+    <p>November 05, 1955</p>
+  </div>
+
+  <div class="item item-body">
+    <strong>{{product.title}}</strong>
+    <img class="full-image" src="{{product.thumbnail}}">
+      <img width="20%" height="20%" src="{{product.pictures[0].url}}">
+      <img width="20%" height="20%" src="{{product.pictures[1].url}}">
+      <img width="20%" height="20%" src="{{product.pictures[2].url}}">
+      <img width="20%" height="20%" src="{{product.pictures[3].url}}">
+    <p>
+      {{product.attributes[0].name}} : {{product.attributes[0].value_name}}<br/>
+      {{product.attributes[1].name}} : {{product.attributes[1].value_name}}<br/>
+      {{product.attributes[2].name}} : {{product.attributes[2].value_name}}<br/>
+    </p>
+    <a class="button button-positive" href="#/app/askcredito">Solicita tu Credito</a>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+</div>
+  </ion-item>
+</ion-content>
+</ion-view>

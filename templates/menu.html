@@ -16,25 +16,28 @@
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/home">
-        <i class="icon ion-model-s larger dark"></i> Home
+        <i class="icon ion-cube larger dark"></i> {{ 'MENU.menu_title1' | translate }}
+        </ion-item>
+        <ion-item menu-close href="#/app/products">
+        <i class="icon ion-map larger dark"></i> Lugares cercanos
         </ion-item>
         <ion-item menu-close href="#/app/profile">
-        <i class="icon ion-android-contact larger dark"></i> PROFILE
+        <i class="icon ion-android-contact larger dark"></i> {{ 'MENU.menu_title2' | translate }}
         </ion-item>
         <ion-item menu-close href="#/app/payment">
-         <i class="icon ion-card larger dark"></i> PAYMENT
+         <i class="icon ion-card larger dark"></i> {{ 'MENU.menu_title3' | translate }}
         </ion-item>
         <ion-item menu-close href="#/app/support">
-         <i class="ion-ios-chatbubble"></i> SUPPORT
+         <i class="ion-ios-chatbubble"></i> {{ 'MENU.menu_title4' | translate }}
         </ion-item>
         <ion-item menu-close href="#/app/invite">
-         <i class="ion-ios-paperplane-outline"></i> SHARE
+         <i class="ion-ios-paperplane-outline"></i> {{ 'MENU.menu_title5' | translate }}
         </ion-item>
         <ion-item menu-close href="#/app/about">
-         <i class="ion-android-alert"></i> ABOUT
+         <i class="ion-android-alert"></i> {{ 'MENU.menu_title6' | translate }}
         </ion-item>
         <ion-item menu-close ng-click="logOut()">
-          <i class="ion-log-out"></i> Logout
+          <i class="ion-log-out"></i> {{ 'MENU.menu_title7' | translate }}
         </ion-item>
       </ion-list>
     </ion-content>

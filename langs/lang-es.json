@@ -10,7 +10,14 @@
         "join_message": "Registrarse"
     },
     "MENU": {
-        "text_title": "Airbnb for X"
+        "text_title": "Airbnb for X",
+        "menu_title1": "Inicio",
+        "menu_title2": "Perfil",
+        "menu_title3": "Pagos",
+        "menu_title4": "Soporte",
+        "menu_title5": "Compartir",
+        "menu_title6": "Sobre",
+        "menu_title7": "Salir"
     },
     "REGISTER": {
         "text_title": "Registrarse",

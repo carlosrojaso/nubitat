@@ -66,6 +66,24 @@ angular.module('starter', ['ionic', 'ngStorage', 'ngCordova','firebase','pascalp
         }
       }
     })
+  .state('app.products', {
+      url: '/products',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/products/products.html',
+          controller: 'prodCtrl'
+        }
+      }
+    })
+  .state('app.productsview', {
+      url: '/productsview/:productId',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/products/productview.html',
+          controller: 'prodviewCtrl'
+        }
+      }
+    })
   .state('app.support', {
         url: '/support',
         views: {

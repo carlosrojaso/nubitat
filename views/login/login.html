@@ -9,7 +9,7 @@
           <div class="list">
             <label class="item item-input item-floating-label" ng-class="{ 'has-error' : loginForm.txtemail.$invalid && loginForm.$submitted }">
               <span class="input-label">{{ 'LOGIN.email_field' | translate }}</span>
-              <input name="txtemail" type="email" ng-model="user.email" placeholder="Email"
+              <input name="txtemail" type="email" ng-model="user.email" placeholder="{{ 'LOGIN.email_field' | translate }}"
               ng-minlength="5"
               ng-maxlength="30"
               required>
@@ -23,7 +23,7 @@
             </div>
             <label class="item item-input item-floating-label" ng-class="{ 'has-error-lr' : loginForm.txtPassword.$invalid && loginForm.$submitted }">
               <span class="input-label">{{ 'LOGIN.pass_field' | translate }}</span>
-              <input name="txtemail" type="email" ng-model="user.email" placeholder="{{ 'LOGIN.email_field' | translate }}"
+              <input name="txtPassword" type="password" ng-model="user.password" placeholder="{{ 'LOGIN.pass_field' | translate }}"
               ng-minlength="6"
               ng-maxlength="30"
               required>
