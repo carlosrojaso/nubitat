@@ -1,6 +1,6 @@
 {
     "LOGIN": {
-        "text_title": "Firebase 3 Starter",
+        "text_title": "Nubitad",
         "login_title": "Ingresar",
         "email_field": "Email",
         "pass_field": "Password",
@@ -10,7 +10,7 @@
         "join_message": "Registrarse"
     },
     "MENU": {
-        "text_title": "Airbnb for X",
+        "text_title": "Nubitad",
         "menu_title1": "Inicio",
         "menu_title2": "Perfil",
         "menu_title3": "Pagos",
@@ -18,6 +18,9 @@
         "menu_title5": "Compartir",
         "menu_title6": "Sobre",
         "menu_title7": "Salir"
+    },
+    "HOME": {
+        "text_title": "Nubitad"
     },
     "REGISTER": {
         "text_title": "Registrarse",

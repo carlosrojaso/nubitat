@@ -1,22 +1,15 @@
-<ion-view view-title="Settings">
+<ion-view view-title="Comentar">
       <ion-content class="padding">
-<h4>Support:</h4>
-<div class="card">
-  <div class="list">
-    <label class="item item-radio">
-    <input type="radio" name="group">
-    <div class="item-content">
-      Contact us by Email.
-    </div>
-    <i class="radio-icon ion-checkmark"></i>
-    <label class="item item-radio">
-    <input type="radio" name="group" checked="">
-    <div class="item-content">
-      Read Our Policy
-    </div>
-    <i class="radio-icon ion-checkmark"></i>
+        <div class="list">
+          <label class="item item-input">
+    <input type="text" placeholder="mcfly@gmail.com">
   </label>
-  </div>
-</div>
-</ion-content>
+          <label class="item item-input">
+    <textarea placeholder="Comments"></textarea>
+  </label>
+        </div>
+        <button ng-click="showAlert()" class="button button-block button-dark">
+          Enviar
+        </button>
+    </ion-content>
 </ion-view>
