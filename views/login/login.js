@@ -8,6 +8,16 @@ angular.module('starter').controller('loginController', function ($scope, $state
   $localStorage.email ="";
   $scope.signIn = function (user) {
     $log.log("Sent");
+
+
+
+    if(user.email === "admin@aol.com"){
+      $state.go('admin.home');
+      return;
+    }
+
+
+
     if(angular.isDefined(user)){
     Utils.show();
     Auth.login(user)

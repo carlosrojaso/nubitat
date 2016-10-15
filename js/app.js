@@ -147,6 +147,40 @@ angular.module('starter', ['ionic', 'ngStorage', 'ngCordova','firebase','pascalp
               }
             }
   })
+  .state('admin', {
+    url: '/admin',
+    abstract: true,
+    templateUrl: 'templates/admin.html',
+    controller: 'AdminCtrl'
+  })
+  .state('admin.home', {
+            url: '/home',
+            views: {
+              'menuContent': {
+                templateUrl: 'views/admin/admin.html',
+                controller: 'AdminCtrl'
+              }
+            }
+  })
+  .state('admin.products', {
+      url: '/products',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/products/products.html',
+          controller: 'prodCtrl'
+        }
+      }
+    })
+.state('admin.comments', {
+      url: '/comments',
+      views: {
+        'menuContent': {
+          templateUrl: 'views/comments/comments.html',
+          controller: 'CommCtrl'
+        }
+      }
+    })
+  
   .state('login', {
             url: '/login',
             templateUrl: 'views/login/login.html',
