@@ -1,0 +1,46 @@
+<ion-nav-bar>
+  <ion-nav-back-button class="button-clear">
+    <i class="ion-arrow-left-c"></i> Back
+  </ion-nav-back-button>
+</ion-nav-bar>
+<ion-view view-title="Lista de Productos">
+<ion-header-bar class="bar-stable" ng-controller="prodCtrl">
+      <h1 class="title">Solicitar credito</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Mi nombre es:</span>
+    <input type="text" placeholder="Mi nombre es">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Mi RUT es:</span>
+    <input type="text" placeholder="Mi RUT es:">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Mi renta mensual es:</span>
+    <input type="text" placeholder="Mi renta es:">
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Quiero:
+    </div>
+    <select>
+      <option selected>Nueva</option>
+      <option>Usada</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      La propiedad es un(a):
+    </div>
+    <select>
+      <option selected>Casas</option>
+      <option>Departamento</option>
+      <option>Terreno</option>
+    </select>
+  </label>
+  <a class="button button-positive " href="#/app/credito2">Continuar</a>
+</div>
+    </ion-content>
+</ion-view>

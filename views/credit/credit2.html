@@ -1,0 +1,53 @@
+<ion-nav-bar>
+  <ion-nav-back-button class="button-clear">
+    <i class="ion-arrow-left-c"></i> Back
+  </ion-nav-back-button>
+</ion-nav-bar>
+<ion-view view-title="Lista de Productos">
+<ion-header-bar class="bar-stable" ng-controller="prodCtrl">
+      <h1 class="title">Solicitar credito</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+  <ion-list>
+  <ion-item>
+    Que tipo de tasa quieres?
+  <ion-radio ng-model="choice" ng-model="'A'">Tasa Fija(UF)</ion-radio>
+  <ion-radio ng-model="choice" ng-value="'B'">Tasa Fila(UF) + variable</ion-radio>
+  </ion-item>
+  <ion-item>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Cual es el valor de la propieda?</span>
+    <input type="text" placeholder="Cual es el valor de la propiedad?">
+  </label>
+  </ion-item>
+  <ion-item>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Cual es el monto del pie que entregarás? (%)</span>
+    <input type="text" placeholder="Cual es el valor de la propiedad? (%)">
+    <span style="font-size:x-small">minimo de 10% de valor de la propiedad ($xxx.xxx)</span>
+  </label>
+  </ion-item>
+  <ion-item>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Cual es el monto del credito que deseas solicitar? ($)</span>
+    <input type="text" placeholder="Cual es el monto del credito que deseas solicitar? ($)">
+  </label>
+  </ion-item>
+  <ion-item>
+    En cuantos años deseas pagar el credito?
+  <ion-radio ng-model="choice" ng-model="20">20 años</ion-radio>
+  <ion-radio ng-model="choice" ng-value="25">25 años</ion-radio>
+  <ion-radio ng-model="choice" ng-value="30">30 años</ion-radio>
+  </ion-item>
+  <ion-list>
+    Deseas meses de gracia?
+  <ion-checkbox ng-model="Si">Si</ion-checkbox>
+  <ion-checkbox ng-model="No">No</ion-checkbox>
+
+</ion-list>
+</ion-list>
+  <a class="button button-positive " href="#/app/creditresult">Continuar</a>
+</div>
+    </ion-content>
+</ion-view>

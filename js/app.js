@@ -120,6 +120,33 @@ angular.module('starter', ['ionic', 'ngStorage', 'ngCordova','firebase','pascalp
               }
             }
   })
+  .state('app.credits', {
+            url: '/credito',
+            views: {
+              'menuContent': {
+                templateUrl: 'views/credit/credit.html',
+                controller: 'creditCtrl'
+              }
+            }
+  })
+  .state('app.credits2', {
+            url: '/credito2',
+            views: {
+              'menuContent': {
+                templateUrl: 'views/credit/credit2.html',
+                controller: 'creditCtrl'
+              }
+            }
+  })
+  .state('app.creditresult', {
+            url: '/creditresult',
+            views: {
+              'menuContent': {
+                templateUrl: 'views/credit/creditresult.html',
+                controller: 'creditCtrl'
+              }
+            }
+  })
   .state('login', {
             url: '/login',
             templateUrl: 'views/login/login.html',
