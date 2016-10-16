@@ -1,6 +1,6 @@
 {
     "LOGIN": {
-        "text_title": "Nubitad",
+        "text_title": "Nubitat",
         "login_title": "Ingresar",
         "email_field": "Email",
         "pass_field": "Password",
@@ -10,7 +10,7 @@
         "join_message": "Registrarse"
     },
     "MENU": {
-        "text_title": "Nubitad",
+        "text_title": "Nubitat",
         "menu_title1": "Inicio",
         "menu_title2": "Perfil",
         "menu_title3": "Pagos",
@@ -20,7 +20,7 @@
         "menu_title7": "Salir"
     },
     "HOME": {
-        "text_title": "Nubitad"
+        "text_title": "Nubitat"
     },
     "REGISTER": {
         "text_title": "Registrarse",

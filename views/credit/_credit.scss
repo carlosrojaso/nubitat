@@ -1,0 +1,46 @@
+.credito {
+    padding-top: 20px;
+    textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    border-bottom: 1px solid #ccc;
+    }
+    .recursos {
+        border: none !important;
+        color: #ccc !important;
+    }
+    input::-webkit-input-placeholder {
+       color: #666;
+    }
+    input:-moz-placeholder { /* Firefox 18- */
+       color: #666;  
+    }
+    input::-moz-placeholder {  /* Firefox 19+ */
+       color: #666;  
+    }
+    input:-ms-input-placeholder {  
+       color: #666;  
+    }
+    label.item.item-input.item-select {
+        background: #f6f6f6 !important;
+        margin-top: 20px;
+    }
+    label.item.item-radio {
+        background: #f6f6f6 !important;
+        margin-top: 20px;
+        .radio-content {
+            .item-content {
+                background-color: transparent;
+                color: #666;
+            }
+            i.radio-icon {
+                background: #00bab4;
+            }
+        }
+    }
+    select {
+        background: #f6f6f6;
+    }
+
+    .item{
+        border: none;
+    }
+}
