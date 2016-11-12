@@ -1,0 +1,67 @@
+:before, .bar button.button-icon:before, .bar button .icon:before, .bar button.icon:before, .bar button.icon-left:before, .bar button.icon-right:before {
+    color: #fff;
+}
+
+.home {
+   @include background-gradient();
+    .scroll-content {
+        padding: 0 5%;
+    }
+    .button.button-positive {
+        background: transparent !important;
+        border: 2px solid #fff ;
+        border-radius: 3px;
+    }
+
+    .item{
+        border:none;
+    }
+}
+.button.button-positive {
+    @include background-gradient(); 
+    border-radius: 3px;
+}
+
+.button.button-positive.patch {
+    background: transparent !important;
+    border: 2px solid #fff ;
+    border-radius: 3px;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    color:#ccc;
+    border-bottom: 1px solid #fff;
+}
+.recursos {
+    border: none !important;
+    color: #ccc !important;
+}
+input::-webkit-input-placeholder {
+   color: #ebebeb;
+}
+input:-moz-placeholder { /* Firefox 18- */
+   color: #ebebeb;  
+}
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: #ebebeb;  
+}
+input:-ms-input-placeholder {  
+   color: #ebebeb;  
+}
+.button.button-positive.destacado {
+    background: rgba(255,255,244,.4) !important;
+}
+.bar.bar-stable {
+  @include background-gradient();
+}
+.bar-stable bar bar-header {
+    @include background-gradient();
+    
+}
+.bar.bar-stable .title {
+    color: #fff;
+}
+
+.button.button-positive.contactarme {
+    background: #00bab4;
+    margin-left: 10px;
+}
