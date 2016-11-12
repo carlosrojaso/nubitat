@@ -9848,6 +9848,39 @@ a.button {
   .credito .item {
     border: none; }
 
+.credito {
+  padding-top: 20px; }
+  .credito textarea, .credito input[type="text"], .credito input[type="password"], .credito input[type="datetime"], .credito input[type="datetime-local"], .credito input[type="date"], .credito input[type="month"], .credito input[type="time"], .credito input[type="week"], .credito input[type="number"], .credito input[type="email"], .credito input[type="url"], .credito input[type="search"], .credito input[type="tel"], .credito input[type="color"] {
+    border-bottom: 1px solid #ccc; }
+  .credito .recursos {
+    border: none !important;
+    color: #ccc !important; }
+  .credito input::-webkit-input-placeholder {
+    color: #666; }
+  .credito input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #666; }
+  .credito input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666; }
+  .credito input:-ms-input-placeholder {
+    color: #666; }
+  .credito label.item.item-input.item-select {
+    background: #f6f6f6 !important;
+    margin-top: 20px; }
+  .credito label.item.item-radio {
+    background: #f6f6f6 !important;
+    margin-top: 20px; }
+    .credito label.item.item-radio .radio-content .item-content {
+      background-color: transparent;
+      color: #666; }
+    .credito label.item.item-radio .radio-content i.radio-icon {
+      background: #00bab4; }
+  .credito select {
+    background: #f6f6f6; }
+  .credito .item {
+    border: none; }
+
 .menu.menu-left {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9e4f7+0,0082b9+100;Ble+3D+%235 */
   background: #00bab4;
@@ -9966,3 +9999,7 @@ input:-ms-input-placeholder {
 
 .bar.bar-stable .title {
   color: #fff; }
+
+.button.button-positive.contactarme {
+  background: #00bab4;
+  margin-left: 10px; }
