@@ -29,7 +29,8 @@
         "pass_field": "Password",
         "signin_message": "Ingresar",
         "forgot_message": "Olvido Password?",
-        "join_message": "Registrarse"
+        "join_message": "Registrarse",
+        "back_message": "Volver"
     },
     "FORGOT": {
         "text_title": "Recuperar Password",

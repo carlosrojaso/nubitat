@@ -1,4 +1,4 @@
-<ion-view view-title="Forgot Password">
+<ion-view view-title="Forgot Password" class="forgot">
   <ion-content class="padding-top">
     <div class="text-center padding">
       <i style="font-size: 80px" class="icon ion-ios-infinite larger dark"></i>
@@ -19,8 +19,13 @@
         <div class="form-error" ng-message="maxlength">This field is must be less than 30 characters.</div>
       </div>
       <div class="padding-top">
-      <input type="submit" value="Reset my password" class="button button-block button-dark"/>
+      <input type="submit" value="Reset my password" class="button button-block button-positive destacado"/>
   </form>
+  <div>
+    <p class="text-center padding-top">
+                <a href="#/home" class="button button-clear button-positive recursos">{{ 'REGISTER.back_message' | translate }}</a>
+            </p>
+  </div>
     </div>
   </ion-content>
 </ion-view>

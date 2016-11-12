@@ -1,0 +1,15 @@
+.forgot {
+    @include background-gradient();
+    .scroll-content {
+        padding: 0 5%;
+    }
+    .button.button-positive {
+        background: transparent !important;
+        border: 2px solid #fff ;
+        border-radius: 3px;
+    }
+
+    .item{
+        border:none;
+    }
+}

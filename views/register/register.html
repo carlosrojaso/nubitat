@@ -1,7 +1,7 @@
-<ion-view view-title="Register">
+<ion-view view-title="Register" class="register">
   <ion-content class="padding-top">
     <div class="text-center padding-top">
-      <i class="icon ion-android-person-add larger dark" style="font-size: 80px"></i>
+      <i class="icon ion-android-person-add larger dark" style="font-size: 80px; color:black"></i>
     </div>
     <form name="registerForm" novalidate ng-submit="registerForm.$valid && register(user)"
     ng-class="{ 'has-error' : registerForm.txtemail.$invalid && registerForm.$submitted }">
@@ -33,8 +33,13 @@
       </div>
     </div>
     <div class="padding-top">
-      <input type="submit" value="Register" class="button button-block button-dark"/>
+      <input type="submit" value="Register" class="button button-block button-positive destacado"/>
     </div>
   </form>
+  <div>
+    <p class="text-center padding-top">
+                <a href="#/home" class="button button-clear button-positive recursos">{{ 'REGISTER.back_message' | translate }}</a>
+            </p>
+  </div>
   </ion-content>
 </ion-view>
