@@ -63,12 +63,28 @@ $scope.showPopup = function() {
 
  // An alert dialog
  $scope.showAlert = function() {
+   //emailjs.send("sendgrid","template_1uICyvUz",{name: "Inmobiliaria Asociada", notes: "Credito Preaprobado", destiny:"inmobiliaria@dispostable"});
+   //emailjs.send("sendgrid","template_1uICyvUz",{name: "Ejecutiva de Cuenta", notes: "Buena oportunidad de Credito Hipotecario", destiny:"ejecutiva@dispostable"});
+   
+   emailjs.send("sendgrid","template_1uICyvUz",{
+     to_name: "Juan Trump", 
+     message_html: "Credito Preaprobado"})
+.then(
+  function(response) {
+    $log.log("SUCCESS", response);
+    $state.go('app.products');
+  }, 
+  function(error) {
+    $log.log("FAILED", error);
+  }
+);
+   
    var alertPopup = $ionicPopup.alert({
      title: 'Credito',
      template: 'Credito Aprobado'
    });
 
-   $state.go('app.products');
+   
  };
    
 

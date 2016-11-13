@@ -13,7 +13,6 @@ angular.module('starter').controller('loginController', function ($scope, $state
 
     if(user.email === "admin@aol.com"){
       $state.go('admin.home');
-      //emailjs.send("sendgrid","template_1uICyvUz",{name: "James", notes: "Check this out!"});
       return;
     }
 
