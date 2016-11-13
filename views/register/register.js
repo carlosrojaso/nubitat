@@ -4,6 +4,13 @@ angular.module('starter').controller('registerController', function ($scope, $st
   $scope.register = function(user) {
     if(angular.isDefined(user)){
     Utils.show();
+
+    user.name = "";
+    user.lastname = "";
+    user.iden = "";
+    user.bank = "";
+    user.registered = Date();
+    
     Auth.register(user)
       .then(function() {
          Utils.hide();

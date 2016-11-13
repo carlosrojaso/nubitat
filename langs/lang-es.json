@@ -32,6 +32,15 @@
         "join_message": "Registrarse",
         "back_message": "Volver"
     },
+    "PROFILE": {
+        "text_title": "Perfil",
+        "name_field": "Nombre",
+        "last_field": "Apellido",
+        "iden_field": "Rut",
+        "bank_field": "Banco",
+        "email_field": "Email",
+        "save_message": "Guardar"
+    },
     "FORGOT": {
         "text_title": "Recuperar Password",
         "email_field": "Email",

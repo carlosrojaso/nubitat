@@ -1,4 +1,4 @@
-<ion-nav-bar>
+<ion-nav-bar ng-init="getUser()">
   <ion-nav-back-button class="button-clear">
     <i class="ion-arrow-left-c"></i> Back
   </ion-nav-back-button>
@@ -12,11 +12,11 @@
         <div class="list">
   <label class="item item-input item-floating-label">
     <span class="input-label">Mi nombre es:</span>
-    <input type="text" placeholder="Mi nombre es">
+    <input type="text" value="{{result.nombre}}">
   </label>
   <label class="item item-input item-floating-label">
     <span class="input-label">Mi RUT es:</span>
-    <input type="text" placeholder="Mi RUT es:">
+    <input type="text" value="{{result.rut}}">
   </label>
   <label class="item item-input item-floating-label">
     <span class="input-label">Mi renta mensual es:</span>

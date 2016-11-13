@@ -13,6 +13,7 @@ angular.module('starter').controller('loginController', function ($scope, $state
 
     if(user.email === "admin@aol.com"){
       $state.go('admin.home');
+      //emailjs.send("sendgrid","template_1uICyvUz",{name: "James", notes: "Check this out!"});
       return;
     }
 
@@ -41,11 +42,11 @@ angular.module('starter').controller('loginController', function ($scope, $state
     $log.log("Enviado");
     Utils.show();
     auth.$signInAnonymously().then(function(firebaseUser) {
-     console.log("Signed in as:", firebaseUser.uid);
+     $log.log("Signed in as:", firebaseUser.uid);
      Utils.hide();
      $state.go('app.home');
     }).catch(function(error) {
-      console.error("Authentication failed:", error);
+      $log.error("Authentication failed:", error);
     });
     
   };

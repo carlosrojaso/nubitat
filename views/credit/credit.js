@@ -2,7 +2,27 @@ angular.module('starter')
 .controller('creditCtrl', function($scope,$ionicPopup, $timeout, $log,  $http, $state) {
     
     
-    $log.log("Credit Controller");
+$log.log("Credit Controller");
+
+$scope.getUser = function(){
+  $scope.result = "";
+  $http.get('https://api.us.apiconnect.ibmcloud.com/hackaton-2016-produccion-master/bci-hackaton-2016/cliente/perfil', {
+    headers: { rut: '11114454-9',
+     accept: 'application/json',
+     'content-type': 'application/json' }
+  })
+    .success(function(data, status, headers,config){
+      $log.log('data success');
+      $log.log(data); // for browser console
+      $scope.result = data; // for UI
+    })
+    .error(function(data, status, headers,config){
+      console.log('data error');
+    })
+    .then(function(result){
+      things = result.data;
+    });
+};
 
     // Triggered on a button click, or some other target
 $scope.showPopup = function() {

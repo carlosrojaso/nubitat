@@ -20,7 +20,7 @@ angular.module('starter').factory('Auth', function(FURL, $log, $firebaseAuth, $f
     register: function(user) {
       return auth.$createUserWithEmailAndPassword(user.email, user.password)
         .then(function(firebaseUser) {
-          console.log("User created with uid: " + firebaseUser.uid);
+          $log.log("User created with uid: " + firebaseUser.uid);
           Auth.createProfile(firebaseUser.uid,user);
         })
         .catch(function(error) {
@@ -32,7 +32,11 @@ angular.module('starter').factory('Auth', function(FURL, $log, $firebaseAuth, $f
       var profile = {
 				id: uid,
         email: user.email,
-				registered_in: Date()
+        name: user.name,
+        lastname: user.lastname,
+        iden: user.iden,
+        bank: user.bank,
+				registered_in: user.registered
       };
 
       // If you want insert more data should modify register.html and modify your object.
@@ -56,7 +60,7 @@ angular.module('starter').factory('Auth', function(FURL, $log, $firebaseAuth, $f
 
     logout: function() {
       auth.$signOut();
-			console.log("User Logout.");
+			$log.log("User Logout.");
     },
 
 		resetpassword: function(email) {
@@ -69,6 +73,10 @@ angular.module('starter').factory('Auth', function(FURL, $log, $firebaseAuth, $f
 					Utils.errMessage(error);
 				  //console.error("Error: ", error.message);
 				});
+    },
+
+    getRef: function(){
+      return ref;
     },
 
 		changePassword: function(user) {
