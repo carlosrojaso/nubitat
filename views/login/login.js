@@ -10,7 +10,7 @@ angular.module('starter').controller('loginController', function ($scope, $state
     $log.log("Sent");
 
 
-
+// TODO
     if(user.email === "admin@aol.com"){
       $state.go('admin.home');
       return;
