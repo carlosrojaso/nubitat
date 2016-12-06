@@ -200,6 +200,26 @@ angular.module('starter', ['ionic', 'ngStorage', 'ngCordova','firebase','pascalp
       templateUrl: 'views/forgot/forgot.html',
       controller:'forgotController'
     })
+  .state('intro', {
+      url: '/intro',
+      templateUrl: 'views/intro/intro.html',
+      controller: 'introCtrl'  
+    })
+  .state('step1', {
+      url: '/step1',
+      templateUrl: 'views/infodata/step1.html',
+      controller: ''  
+    })
+  .state('step2', {
+      url: '/step2',
+      templateUrl: 'views/infodata/step2.html',
+      controller: ''  
+    })
+  .state('success', {
+      url: '/success',
+      templateUrl: 'views/infodata/success.html',
+      controller: 'introCtrl'  
+    })
   ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');

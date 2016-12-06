@@ -1,20 +1,24 @@
 angular.module('starter')
-.controller('MapCtrl', function ($scope, $http, $ionicLoading, $ionicSideMenuDelegate, $log, $cordovaGeolocation, MapsFunc, MLAPI) {
+.controller('MapCtrl', function ($scope, $http, $ionicLoading, $ionicSideMenuDelegate, $log, $cordovaGeolocation, MapsFunc, MLAPI, Utils) {
  $log.log("MapCtrl Controller");
-  var options = {timeout: 10000, enableHighAccuracy: false};
+  Utils.show();
+  var options = {timeout: 30000, enableHighAccuracy: false};
   var _resultsNum = 100;
   var shopId = "MLC"; //TODO - choose country from user settings.
   var _URLSearch = MLAPI.url + "/sites/" + shopId + "/search";
   var myPosition = [];
 
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
- 
-    MapsFunc.setCurrentPosition(position);
-    $log.log("Mi pos:" + MapsFunc.currentPosition);
+     
+    var lat  = position.coords.latitude;
+    var long = position.coords.longitude;
+    $log.log("Mi pos:" + lat + "long: " + long);
+    MapsFunc.setCurrentPosition(lat, long);
 
     var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
  
     myPosition = position;
+
 
     var mapOptions = {
       center: latLng,
@@ -43,12 +47,14 @@ angular.module('starter')
 
     //$log.log("Mapa: ", $scope.map);
     $scope.searching();
+    Utils.hide();
     });
 
     
  
   }, function(error){
     console.log("Could not get location");
+    Utils.hide();
   });
 
   $scope.showInMap = function(data){

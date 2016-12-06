@@ -10052,3 +10052,14 @@ input:-ms-input-placeholder {
     border-radius: 3px; }
   .register .item {
     border: none; }
+
+.box {
+  height: 100%;
+  color: white;
+  vertical-align: middle;
+  text-align: left;
+  padding: 25px;
+  background: #00bab4; }
+
+ion-slides {
+  height: 100vh !important; }

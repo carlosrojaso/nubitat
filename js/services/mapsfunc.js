@@ -1,9 +1,17 @@
 angular.module('starter')
-.factory('MapsFunc', function($log,Utils) {
+.factory('MapsFunc', function() {
 	var MapsFunc = {
-    currentPosition: '',
-    setCurrentPosition: function(position){
-        this.currentPosition = position;
+    lat: '',
+		lon: ''
+	};
+
+	return { 
+		getCurrentPosition: function(){
+			return MapsFunc;
+		},
+    setCurrentPosition: function(lat,lon){
+       angular.copy(lat, MapsFunc.lat);
+			 angular.copy(lon, MapsFunc.lon);
     },
     toRad: function(Value) {
       return Value * Math.PI / 180;
@@ -22,6 +30,5 @@ angular.module('starter')
 	      return d.toFixed(1);
     }
 	};
-	return MapsFunc;
 
 });
