@@ -1,16 +1,17 @@
 angular.module('starter')
-.controller('MapCtrl', function ($scope, $http, $ionicLoading, $ionicSideMenuDelegate, $log, $cordovaGeolocation) {
+.controller('MapCtrl', function ($scope, $http, $ionicLoading, $ionicSideMenuDelegate, $log, $cordovaGeolocation, MapsFunc, MLAPI) {
  $log.log("MapCtrl Controller");
-  var options = {timeout: 10000, enableHighAccuracy: true};
+  var options = {timeout: 10000, enableHighAccuracy: false};
   var _resultsNum = 100;
   var shopId = "MLC"; //TODO - choose country from user settings.
-  var _URLSearch = "https://api.mercadolibre.com/sites/" + shopId + "/search";
+  var _URLSearch = MLAPI.url + "/sites/" + shopId + "/search";
   var myPosition = [];
 
-
- 
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
  
+    MapsFunc.setCurrentPosition(position);
+    $log.log("Mi pos:" + MapsFunc.currentPosition);
+
     var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
  
     myPosition = position;
@@ -64,11 +65,10 @@ angular.module('starter')
       '<img src="http://icons.iconarchive.com/icons/icons8/windows-8/512/City-Market-Square-icon.png" width="20px"/>:' + " 10" + 
       '<img src="http://image.freepik.com/free-icon/pins-hospital_318-27146.png" width="20px"/>:' + " 5" +
       '<img src="http://image.freepik.com/darmowe-ikony/kawiarnia-szpilki_318-27160.png" width="20px"/>:' + " 15" +
-      '<p><b>Distancia: </b>' + Math.round(result.distance/1000) + 'km <br/>' + 
-      '<a href="#/productsview/'+ result.id + '">' + result.title + '</a>' + 
+      '<p>'+
+      '<a href="#/app/productsview/'+ result.id + '">' + result.title + '</a>' + 
       '</p>'+
-      '</div>'+
-      '</div>';
+      '</div></div>';
     var marker = new google.maps.Marker({
           map: $scope.map,
           animation: google.maps.Animation.DROP,
@@ -109,7 +109,7 @@ angular.module('starter')
     {
       if(result.seller_address.latitude!=undefined &&result.seller_address.longitude!=undefined && result.thumbnail!=undefined){
 					
-					var distance = $scope.calcDistance(myPosition.coords.latitude,myPosition.coords.latitude,result.seller_address.latitude,result.seller_address.longitude);
+					var distance = MapsFunc.calcDistance(myPosition.coords.latitude,myPosition.coords.latitude,result.seller_address.latitude,result.seller_address.longitude);
 					
 					var r = {	id:result.id,
 								title:result.title,
@@ -155,29 +155,6 @@ angular.module('starter')
 
     
 	};
-
-  $scope.toRad = function(Value){
-	        return Value * Math.PI / 180;
-    };
-  
-  $scope.calcDistance = function(lat1, lon1, lat2, lon2){
-	      var R = 6371; // km
-	      var dLat = $scope.toRad(lat2-lat1);
-	      var dLon = $scope.toRad(lon2-lon1);
-	      var lat1 = $scope.toRad(lat1);
-	      var lat2 = $scope.toRad(lat2);
-
-	      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-	        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
-	      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-	      var d = R * c;
-	      return d.toFixed(1);
-	    }
-
-  $scope.nearbyPoints = function(){
-
-  };
-
   
 
 });

@@ -30,6 +30,10 @@ angular.module('starter', ['ionic', 'ngStorage', 'ngCordova','firebase','pascalp
     messagingSenderId: "432355875289"
   }
   )
+.constant('MLAPI',{
+    url: "https://api.mercadolibre.com"
+}
+)
 .config(function($stateProvider, $urlRouterProvider, $translateProvider, $translateStaticFilesLoaderProvider) {
   $translateProvider.preferredLanguage('es');
   $translateProvider.useSanitizeValueStrategy('sanitize');
