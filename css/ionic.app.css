@@ -10060,6 +10060,8 @@ input:-ms-input-placeholder {
   text-align: left;
   padding: 25px;
   background: #387ef5; }
+  .box h1 {
+    color: #fff; }
 
 ion-slides {
   height: 100vh !important; }
